@@ -1,0 +1,85 @@
+
+body{
+    width: 100%;
+    height: 100%;
+}
+p{
+    font-size: 1.5rem;
+}
+
+.text-about-all{
+    width: 100%;
+    height: 100%;
+    .text-about{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .text-1{
+            width: 100%;
+            h2{
+                cursor: pointer;
+                font-size: 3.5rem;
+            }
+            
+        }
+    }
+    a{
+        color: var(--cyan-color);
+    }
+    a:hover{
+        
+        color: var(--cyan-color);
+    }
+}
+.cursor{
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    p{
+        font-size: 3rem;
+    }
+    
+    .text-about-all{
+        width: 100%;
+        height: 100%;
+        .text-about{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .text-1{
+                h2{
+                    font-size: 7rem;
+                }
+                
+            }
+           
+        }
+    }
+}
+
+
+@media (min-width:1024px) {
+    p{
+        font-size: 3rem;
+    }
+    
+    .text-about-all{
+        width: 100%;
+        height: 100%;
+        .text-about{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .text-1{
+                h2{
+                    font-size: 10rem;
+                }
+                
+            }
+        }
+    }
+}

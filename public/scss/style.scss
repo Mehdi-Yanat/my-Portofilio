@@ -1,0 +1,311 @@
+@import "config";
+@import "about";
+@import "projects";
+@import "contact";
+:root{
+    --text-color : white ;
+    --bg-color:#030200;
+    --cyan-color:#38b6ff;
+}
+
+.lightmode{
+    --text-color : #030200 ;
+    --bg-color: #FAEEE7;
+    --cyan-color:#C74900;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    
+}
+
+.custom-class{
+    position: relative;
+    background-color: var(--bg-color);
+    height: 100%;
+    border: 8px solid ;
+    border-style:ridge;
+    border-image:  linear-gradient(
+        to bottom, 
+        var(--cyan-color), 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;;
+}
+
+li{
+    list-style: none;
+    display: none;
+    a{
+        text-decoration: none;
+        color: var(--text-color);
+        font-family: 'Pacifico', cursive;
+        font-size: 2rem;
+        transition: 1s ease;
+    }
+    a:hover{
+        text-decoration: none;
+        transform: scale(0.5);
+    }
+   
+}
+
+
+
+.custom-class3{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10%;
+    gap: 5%;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo{
+    filter: invert(0);
+    width: 200px;
+}
+.logoinvert{
+    filter: invert(1);
+}
+
+.container-custom{
+   width: 100%;
+   height: 100vh;
+    display: none;
+    background: var(--bg-color);
+    z-index: 1;
+    opacity: 0.9;
+    position: fixed;
+    transform: translateY(-100%);
+    transition: 3s ease;
+    top: 0;
+    left: 0;
+}
+.toggle{
+    display: block;
+    transform: translateY(0%);
+    transition: 3s;
+    li{
+        display:block;
+    }
+}
+
+
+.content{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img{
+            border: 5px var(--cyan-color) dashed;
+            border-radius: 50%;
+            padding: 10px;
+            width: 300px;
+            height: 300px;
+        }
+        
+    }
+    
+
+    .text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+       
+        h1{
+            font-size: 3rem;
+            color: var(--text-color);
+            font-family: 'Indie Flower', cursive;
+        }
+      
+        p{
+            font-size: 1rem;
+            color: var(--text-color);
+            font-family: 'Monda', sans-serif;
+            font-weight: 400;
+        }
+        
+        text-align: center;
+        .sci{
+            display: flex;
+            gap: 40px;
+            a{
+                font-size: 1.5rem;
+                color: var(--text-color);
+            }
+          
+        }
+    }
+}
+
+.toggle-light{
+    background-image: url(/img/sun.png);
+    
+    width: 64px;
+    height: 64px;
+}
+.toggle-sun{
+    background-image: url(/img/moon.png);
+    width: 64px;
+    height: 64px;
+}
+
+
+
+/* --------------  768px ipad ---------------------*/
+@media (min-width:768px) {
+    li{
+        list-style: none;
+        display: flex;
+        a{
+            text-decoration: none;
+            color: var(--text-color);
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            transition: 1s ease;
+        }
+        a:hover{
+            text-decoration: none;
+            transform: scale(0.5);
+        }
+       
+    }
+  
+    .content{
+       
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        .img{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                border: 5px var(--cyan-color) dashed;
+                border-radius: 50%;
+                padding: 10px;
+                width: 60%;
+                height: 60%;
+            }
+        }
+        .text{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:flex-start;
+            text-align: center;
+            h1{
+                font-size: 4rem;
+                color: var(--text-color);
+                font-family: 'Indie Flower', cursive;
+            }
+        
+            p{
+                font-size: 1.5rem;
+                color: var(--text-color);
+                font-family: 'Monda', sans-serif;
+            }
+            .sci{
+                display: flex;
+                gap: 40px;
+                a{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width:1024px) {
+ 
+    li{
+        list-style: none;
+        display: flex;
+        a{
+            text-decoration: none;
+            color: var(--text-color);
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            transition: 1s ease;
+        }
+        a:hover{
+            text-decoration: none;
+            transform: scale(0.5);
+        }
+       
+    }
+  
+    .content{
+    
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:center ;
+        .img{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img{
+                border: 5px var(--cyan-color) dashed;
+                border-radius: 50%;
+                padding: 10px;
+                width: 60%;
+                height: 60%;
+            }
+        }
+        .text{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content:center;
+            text-align: left;
+            h1{
+                font-size: 5rem;
+                color: var(--text-color);
+                font-family: 'Indie Flower', cursive;
+            }
+         
+            p{
+                font-size: 2rem;
+                color: var(--text-color);
+                font-family: 'Monda' , sans-serif;
+            }
+            .sci{
+                display: flex;
+                gap: 40px;
+                a{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+  
+}

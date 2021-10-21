@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Monda:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+h2{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: 'Indie Flower', cursive;
+}
+span{
+    background-color: var(--cyan-color);
+}
+.orange-bg{
+    background-color:var(--cyan-color) ;
+}
+p{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: 'Monda', sans-serif;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    color: var(--cyan-color);
+    font-family: 'Pacifico', cursive;
+}
+a:hover{
+    color: var(--cyan-color);
+    text-decoration: none;
+}
+
+
+.img-scale{
+    transform: scale(5);
+}
+
+.btn-custom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 40px;
+    height: 35px;
+   z-index: 10;
+   cursor: pointer;
+    .btn-bar2{
+        width: 50px;
+        height: 2px;
+        background-color: var(--text-color);
+        transform: translateX(0);
+        transition: 1s;
+      
+    }
+    .btn-bar1{
+        width: 25px;
+        height: 2px;
+        background-color: var(--text-color);
+        transform: translate(0);
+        transition: 1s;
+
+    }
+    .btn-bar3{
+        width: 25px;
+        height: 2px;
+        background-color: var(--text-color);
+        transform: translateY(0);
+        transition: 1s;
+    }
+    .bg-color-black{
+        background-color: var(--bg-color);
+    }
+    
+}
+
+.Projects{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .boxs{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border: 5px solid ;
+        border-style:ridge;
+        border-image:  linear-gradient(
+            to bottom, 
+            var(--cyan-color), 
+            rgba(0, 0, 0, 0)
+          ) 1 100%;
+        flex-direction: column;
+        align-items: center;
+       
+        .allbox{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .projects-image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+                .overlay{
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--bg-color);
+                    position: absolute;
+                    font-size: 2rem;
+                    transition: 1s;
+                    a{
+                        color: var(--text-color);
+                    }
+                    a:hover{
+                        text-decoration: none;
+                    }
+                    .link{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .Github{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+                .overlay:hover{
+                    opacity: 0.7;
+                }
+                
+              
+            }
+        }
+        
+    }
+   
+   
+}
+
+.custom-class4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    a:hover{
+        text-decoration: none;
+    }
+    button{
+        background-color: var(--cyan-color);
+        border: none;
+        outline: none;
+        padding: 5px 20px;
+        transition: 1s;
+        border-radius: 10px;
+    }
+   
+    button:hover{
+        transform: scale(0.9);
+        h2{
+            transform: translateX(5px);
+        }
+    }
+    .workbox{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .links-to-mystuff{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .btn{
+        background-color: var(--cyan-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .orange-bg{
+        background-color:var(--cyan-color) ;
+    }
+    .fade-effect{
+        display: none;
+    }
+}
+
+.loading-wrapper{
+    z-index: 123;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+    display: flex;
+    align-items: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    .lettre{
+      
+        color: var(--text-color);
+        letter-spacing: 1rem ;
+        font-weight: bolder;
+        font-size: 30px;
+        animation: flash 1.2s linear infinite;
+    }
+    @keyframes flash {
+        0%{
+            color: var(--cyan-color);
+            text-shadow: 0 0 7px var(--cyan-color);
+        }
+        90%{
+            color: rgb(0, 69, 148);
+            text-shadow: none;
+        }
+        100%{
+            color: var(--cyan-color);
+            text-shadow: 0 0 7px var(--cyan-color);
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .loading-wrapper{
+        z-index: 123;
+        background-color: var(--bg-color);
+        width: 100%;
+        height: 100vh;
+        position:fixed;
+        display: flex;
+        align-items: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+        .lettre{
+          
+            color: var(--text-color);
+            letter-spacing: 5rem ;
+            font-weight: bolder;
+            font-size: 60px;
+            animation: flash 1.2s linear infinite;
+        }
+        @keyframes flash {
+            0%{
+                color: var(--cyan-color);
+                text-shadow: 0 0 7px var(--cyan-color);
+            }
+            90%{
+                color: rgb(0, 69, 148);
+                text-shadow: none;
+            }
+            100%{
+                color: var(--cyan-color);
+                text-shadow: 0 0 7px var(--cyan-color);
+            }
+        }
+    }
+}
