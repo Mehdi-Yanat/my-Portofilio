@@ -10,7 +10,7 @@ app.set('view engine' , "hbs")
 app.use(express.static(directory))
 
 
-app.get('' , (req , res) => {
+app.get('/Home' , (req , res) => {
     res.render("index")
 })
 app.get('/About' , (req , res) => {
