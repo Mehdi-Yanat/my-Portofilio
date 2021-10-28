@@ -980,6 +980,7 @@ li a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  text-align: center;
 }
 
 .content .text h1 {
@@ -999,11 +1000,18 @@ li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 40px;
 }
 
 .content .text .sci a {
   font-size: 1.5rem;
+  text-align: center;
   color: var(--text-color);
 }
 

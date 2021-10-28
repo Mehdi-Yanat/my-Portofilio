@@ -83,3 +83,23 @@ $(document).ready(function () {
         $('.loading-wrapper').fadeOut(3000)
     })
 })
+
+$('form').on('submit' , (e) => {
+    e.preventDefault();
+
+    const Email = $('#Email').val().trim();
+    const Name = $('#Name').val().trim()
+    const Message = $('#Message').val().trim()
+    console.log("hamid");
+
+    const data = {
+        Email,
+        Name,
+        Message
+    }
+
+    $.post('/email',data, function () {
+        console.log('data transferred successfully');
+    })
+
+})
