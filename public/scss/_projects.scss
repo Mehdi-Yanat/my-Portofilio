@@ -57,6 +57,9 @@
                     height: 100%;
                 }
                 .overlay{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     opacity: 0;
                     width: 100%;
                     height: 100%;
@@ -80,6 +83,39 @@
                         bottom: 0;
                         right: 0;
                     }
+                    .infoForProject{
+                        display: flex;
+                        background-color: rgb(255, 255, 255);
+                        width: 500px;
+                        border-radius: 30px;
+                        height: 500px;
+                        .frontend{
+                            width: 100%;
+                            height: 100%;
+                    
+                            .tech{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        .backend{
+                            height: 100%;
+                            width: 100%;
+                            .tech{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                 
                 }
                 .overlay:hover{
                     opacity: 0.7;
@@ -107,4 +143,136 @@
         }
     }
     
+}
+
+@media (max-width:768px) {
+ 
+
+.dis-grid-all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .dis-grid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: 100%;
+    }
+}
+
+
+.dis-grid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .grid{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border: 5px solid ;
+        border-style:ridge;
+        border-image:  linear-gradient(
+            to bottom, 
+            var(--cyan-color), 
+            rgba(0, 0, 0, 0)
+          ) 1 100%;
+        flex-direction: column;
+        align-items: center;
+       
+        .allbox{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .projects-image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                img{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+                .overlay{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--bg-color);
+                    position: absolute;
+                    font-size: 2rem;
+                    transition: 1s;
+                    a{
+                        color: var(--text-color);
+                    }
+                    a:hover{
+                        text-decoration: none;
+                    }
+                    .link{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .Github{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    .infoForProject{
+                        display: none;
+                        background-color: rgb(255, 255, 255);
+                        width: 500px;
+                        border-radius: 30px;
+                        height: 500px;
+                        .frontend{
+                            width: 100%;
+                            height: 100%;
+                    
+                            .tech{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                        .backend{
+                            height: 100%;
+                            width: 100%;
+                            .tech{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                 
+                }
+                .overlay:hover{
+                    opacity: 0.7;
+                }
+                
+              
+            }
+        }
+    }
+ 
+}
 }

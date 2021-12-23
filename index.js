@@ -23,16 +23,20 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.post('/email' , (req , res) => {
-    console.log(req.body);
+    //console.log(req.body);
     const {Email , Name , Message} = req.body
-    sendMail(Email , Name ,Message , function (err , data) {
+    sendMail(Email , Name ,Message , function (err , Data) {
         if (err) {
-            res.status(500).json({message : 'internal Error'})
+            res.send({"message":"The Request Failed"} )
+            console.log(err);
+            return
         }else{
-            res.json({
-                data:'email sent!!'
-            })
+            res.send(Data)    
+            console.log(Data);
+            return
         }
+        
+        
     })
 })
 app.get('/Contact' , (req , res) => {

@@ -1,3 +1,5 @@
+
+
 const btn = document.querySelector('.btn-custom') 
 const barsAnimation = document.querySelector('.btn-bar1')
 const barsAnimation1 = document.querySelector('.btn-bar2')
@@ -7,6 +9,10 @@ const li = document.querySelector('li')
 const soundBeep = document.querySelector('.toggle-light')
 const audio = document.getElementById('audio')
 const logo = document.querySelector('.logo')
+let showMessage = document.getElementById('show')
+let email = document.getElementById('Email')
+let nameUser = document.getElementById('Name')
+let message = document.getElementById('Message')
 AOS.init({
     duration: 600,
     delay: 40
@@ -37,14 +43,10 @@ soundBeep.addEventListener('click' , () => {
     lightMode = localStorage.getItem("lightMode")
     if (lightMode !== "enabled") {
         enableLightmode();
-        console.log(lightMode);
     } else {
         disableLightmode();
-        console.log(lightMode);
     }
     audio.play();
-   
-
 })
 
 btn.addEventListener('click' , ()=> {
@@ -85,21 +87,32 @@ $(document).ready(function () {
 })
 
 $('form').on('submit' , (e) => {
+
     e.preventDefault();
+  
+        const Email = $('#Email').val().trim();
+        const Name = $('#Name').val().trim()
+        const Message = $('#Message').val().trim()
+        
+        const data = {
+            Email,
+            Name,
+            Message
+        }
+      
+        
+    
+        $.post('/email',data, function sendEmail (err , Data) {
+            console.log(err.message);
+            console.log(Data.message);
+           if (err) {
+              showMessage.innerText =  ("email not sent");
+           }else{
+              showMessage.innerText = ("email sent");
+           }
+           
+        })
 
-    const Email = $('#Email').val().trim();
-    const Name = $('#Name').val().trim()
-    const Message = $('#Message').val().trim()
-    console.log("hamid");
-
-    const data = {
-        Email,
-        Name,
-        Message
-    }
-
-    $.post('/email',data, function () {
-        console.log('data transferred successfully');
-    })
-
+  
 })
+

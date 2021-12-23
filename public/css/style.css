@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Monda:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -425,7 +426,7 @@ body {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .text-about-all {
@@ -616,6 +617,15 @@ p {
 }
 
 .dis-grid .grid .allbox .projects-image .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -646,6 +656,62 @@ p {
   right: 0;
 }
 
+.dis-grid .grid .allbox .projects-image .overlay .infoForProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 500px;
+  border-radius: 30px;
+  height: 500px;
+}
+
+.dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend {
+  width: 100%;
+  height: 100%;
+}
+
+.dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend .tech {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dis-grid .grid .allbox .projects-image .overlay .infoForProject .backend {
+  height: 100%;
+  width: 100%;
+}
+
+.dis-grid .grid .allbox .projects-image .overlay .infoForProject .backend .tech {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .dis-grid .grid .allbox .projects-image .overlay:hover {
   opacity: 0.7;
 }
@@ -671,6 +737,190 @@ p {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     grid-auto-rows: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dis-grid-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .dis-grid-all .dis-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    grid-auto-rows: 100%;
+  }
+  .dis-grid {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .dis-grid .grid {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 5px solid;
+    border-style: ridge;
+    -o-border-image: linear-gradient(to bottom, var(--cyan-color), rgba(0, 0, 0, 0)) 1 100%;
+       border-image: -webkit-gradient(linear, left top, left bottom, from(var(--cyan-color)), to(rgba(0, 0, 0, 0))) 1 100%;
+       border-image: linear-gradient(to bottom, var(--cyan-color), rgba(0, 0, 0, 0)) 1 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dis-grid .grid .allbox {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dis-grid .grid .allbox .projects-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .dis-grid .grid .allbox .projects-image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    position: absolute;
+    font-size: 2rem;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay a {
+    color: var(--text-color);
+  }
+  .dis-grid .grid .allbox .projects-image .overlay a:hover {
+    text-decoration: none;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .Github {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject {
+    display: none;
+    background-color: white;
+    width: 500px;
+    border-radius: 30px;
+    height: 500px;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend {
+    width: 100%;
+    height: 100%;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend .tech {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject .backend {
+    height: 100%;
+    width: 100%;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject .backend .tech {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay:hover {
+    opacity: 0.7;
   }
 }
 
@@ -715,6 +965,7 @@ p {
   -webkit-box-pack: center;
           justify-content: center;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 
 .container .form form :-ms-input-placeholder {
@@ -727,6 +978,7 @@ p {
   -ms-flex-pack: center;
       justify-content: center;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 
 .container .form form ::-ms-input-placeholder {
@@ -739,6 +991,7 @@ p {
   -ms-flex-pack: center;
       justify-content: center;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 
 .container .form form ::placeholder {
@@ -754,6 +1007,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 
 .container .form form input {
@@ -805,13 +1059,13 @@ p {
 }
 
 .container button:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.container button:hover h2 {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+.container p {
+  text-align: center;
+  font-size: 1rem;
 }
 
 :root {
@@ -1028,6 +1282,11 @@ li a:hover {
   height: 64px;
 }
 
+.text-2 p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 /* --------------  768px ipad ---------------------*/
 @media (min-width: 768px) {
   li {
@@ -1118,7 +1377,11 @@ li a:hover {
     gap: 40px;
   }
   .content .text .sci a {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+  .text-2 p {
+    text-align: left;
+    font-size: 3rem;
   }
 }
 

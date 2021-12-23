@@ -8,13 +8,16 @@ const sendMail = (Email , Name , Message , cb)=> {
         from: Email,
         to: 'hamar3106@gmail.com',
         subject: Name,
-        text: Message
+        text: Message ,
+        required:true
     };
-    mg.messages().send(data, function (error, body) {
+    mg.messages().send(data, function (error, Data) {
         if (error) {
+            console.log(error);
             cb(error , null , "error")
         }else{
-        console.log(body);
+            console.log(Data);
+            cb(Data , "email sent !")
         }
     });
 }

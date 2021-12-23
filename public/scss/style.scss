@@ -172,6 +172,12 @@ li{
     height: 64px;
 }
 
+    .text-2{
+        p{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
 
 
 /* --------------  768px ipad ---------------------*/
@@ -237,12 +243,23 @@ li{
                 display: flex;
                 gap: 40px;
                 a{
-                    font-size: 2rem;
+                    font-size: 3rem;
                 }
             }
         }
     }
+    .text-2{
+        p{
+            text-align: left;
+            font-size: 3rem;
+        }
+    }
+    
 }
+
+
+
+
 @media (min-width:1024px) {
  
     li{
