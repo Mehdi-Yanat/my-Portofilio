@@ -8,10 +8,17 @@
 }
 
 
+
 h2{
     font-size: 1rem;
     color: var(--text-color);
     font-family: 'Indie Flower', cursive;
+}
+h5{
+    background-color: var(--cyan-color);
+    width: 100px;
+    height: 100px;
+    border: 30px;
 }
 span{
     background-color: var(--cyan-color);
@@ -125,23 +132,30 @@ a:hover{
                     height: 100%;
                     background-color: var(--bg-color);
                     position: absolute;
-                    font-size: 2rem;
+                    font-size: 1rem;
                     transition: 1s;
                     a{
-                        color: var(--text-color);
+    
+                        color: black;
                     }
                     a:hover{
                         text-decoration: none;
                     }
                     .link{
+                        border-radius: 30px;
+                        padding: 15px 20px;
+                        background-color: var(--cyan-color);
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        top: 10px;
+                        left: 10px;
                     }
                     .Github{
+                        border-radius: 30px;
+                        padding: 15px 20px;
+                        background-color: var(--cyan-color);
                         position: absolute;
-                        bottom: 0;
-                        right: 0;
+                        bottom: 10px;
+                        right: 10px;
                     }
                 }
                 .overlay:hover{

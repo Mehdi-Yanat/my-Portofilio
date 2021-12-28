@@ -13,6 +13,13 @@ h2 {
   font-family: 'Indie Flower', cursive;
 }
 
+h5 {
+  background-color: var(--cyan-color);
+  width: 100px;
+  height: 100px;
+  border: 30px;
+}
+
 span {
   background-color: var(--cyan-color);
 }
@@ -180,13 +187,13 @@ a:hover {
   height: 100%;
   background-color: var(--bg-color);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1rem;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .Projects .boxs .allbox .projects-image .overlay a {
-  color: var(--text-color);
+  color: black;
 }
 
 .Projects .boxs .allbox .projects-image .overlay a:hover {
@@ -194,15 +201,21 @@ a:hover {
 }
 
 .Projects .boxs .allbox .projects-image .overlay .link {
+  border-radius: 30px;
+  padding: 15px 20px;
+  background-color: var(--cyan-color);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
 }
 
 .Projects .boxs .allbox .projects-image .overlay .Github {
+  border-radius: 30px;
+  padding: 15px 20px;
+  background-color: var(--cyan-color);
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
 }
 
 .Projects .boxs .allbox .projects-image .overlay:hover {
@@ -426,6 +439,7 @@ body {
 }
 
 p {
+  text-align: left;
   font-size: 1rem;
 }
 
@@ -631,7 +645,7 @@ p {
   height: 100%;
   background-color: var(--bg-color);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1rem;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -645,15 +659,21 @@ p {
 }
 
 .dis-grid .grid .allbox .projects-image .overlay .link {
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-color: var(--cyan-color);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
 }
 
 .dis-grid .grid .allbox .projects-image .overlay .Github {
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-color: var(--cyan-color);
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
 }
 
 .dis-grid .grid .allbox .projects-image .overlay .infoForProject {
@@ -713,7 +733,7 @@ p {
 }
 
 .dis-grid .grid .allbox .projects-image .overlay:hover {
-  opacity: 0.7;
+  opacity: 0.95;
 }
 
 @media (min-width: 900px) {
@@ -850,7 +870,7 @@ p {
     height: 100%;
     background-color: var(--bg-color);
     position: absolute;
-    font-size: 2rem;
+    font-size: 1rem;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -872,12 +892,13 @@ p {
   }
   .dis-grid .grid .allbox .projects-image .overlay .infoForProject {
     display: none;
-    background-color: white;
+    background-color: var(--cyan-color);
     width: 500px;
     border-radius: 30px;
     height: 500px;
   }
   .dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend {
+    gap: 20px;
     width: 100%;
     height: 100%;
   }
@@ -897,6 +918,18 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend .tech .front-tech {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dis-grid .grid .allbox .projects-image .overlay .infoForProject .frontend .tech .front-tech div {
+    border: 1px solid black;
   }
   .dis-grid .grid .allbox .projects-image .overlay .infoForProject .backend {
     height: 100%;
@@ -1141,7 +1174,6 @@ li a:hover {
 .logo {
   -webkit-filter: invert(0);
           filter: invert(0);
-  width: 200px;
 }
 
 .logoinvert {
