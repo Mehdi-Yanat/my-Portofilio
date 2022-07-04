@@ -1,6 +1,6 @@
 
-
 const btn = document.querySelector('.btn-custom') 
+const section = document.getElementById('section')
 const barsAnimation = document.querySelector('.btn-bar1')
 const barsAnimation1 = document.querySelector('.btn-bar2')
 const barsAnimation2 = document.querySelector('.btn-bar3')
@@ -17,11 +17,12 @@ AOS.init({
     duration: 600,
     delay: 40
 }
-    
 );
+
 
 let lightMode = localStorage.getItem('lightMode')
     console.log(lightMode);
+
 const enableLightmode = () => {
     document.body.classList.add("lightmode")
     localStorage.setItem('lightMode' , "enabled")
